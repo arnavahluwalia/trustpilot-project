@@ -1,0 +1,12 @@
+dbt_core_project: 
+  target: dev  
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: property-data-analysis  
+      dataset: properties_dataset 
+      threads: 4  
+      keyfile: /Users/arnavahluwalia/Desktop/property_analytics_project/credentials.json  
+      timeout_seconds: 300  
+      location: US  

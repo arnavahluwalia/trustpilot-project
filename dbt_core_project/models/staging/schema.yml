@@ -1,0 +1,143 @@
+
+
+version: 2
+
+sources:
+  - name: properties_dataset  
+    tables:
+      - name: properties_raw  
+
+models:
+  - name: location_information
+    description: ""
+    columns:
+      - name: postcode_outcode
+        description: ""
+        tests:
+          - not_null
+      - name: latitude
+        description: ""
+        tests:
+          - not_null
+      - name: longitude
+        description: ""
+        tests:
+          - not_null
+      - name: location_key
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+  - name: agents_information
+    description: ""
+    columns:
+      - name: agent_url
+        description: ""
+        tests:
+          - not_null
+      - name: agent_key
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+  - name: fct_properties
+    description: ""
+    columns:
+      - name: property_key
+        description: ""
+        tests:
+          - not_null
+      - name: location_key
+        description: ""
+        tests:
+          - not_null
+      - name: date_key
+        description: ""
+        tests:
+          - not_null
+      - name: agent_key
+        description: ""
+        tests:
+          - not_null
+      - name: price
+        description: ""
+        tests:
+          - not_null
+
+  - name: properties_information
+    description: ""
+    columns:
+      - name: property_key
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: url
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: number_bedrooms
+        description: ""
+        tests:
+          - not_null
+
+  - name: dates_information
+    description: ""
+    columns:
+      - name: date_key
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: added_date
+        description: ""
+        tests:
+          - not_null
+      - name: year
+        description: ""
+        tests:
+          - not_null
+      - name: month
+        description: ""
+        tests:
+          - not_null
+  
+  - name: stg_property_listings
+    description: ""
+    columns:
+      - name: price
+        description: ""
+        tests:
+          - not_null
+      - name: url
+        description: ""
+        tests:
+          - not_null
+          - unique
+      - name: number_bedrooms
+        description: ""
+        tests:
+          - not_null
+      - name: longitude
+        description: ""
+        tests:
+          - not_null
+      - name: latitude
+        description: ""
+        tests:
+          - not_null
+      - name: added_date
+        description: ""
+        tests:
+          - not_null
+      - name: postcode
+        description: ""
+        tests:
+          - not_null
+    
+
+
+
