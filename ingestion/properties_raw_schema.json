@@ -1,0 +1,21 @@
+[
+    { "name": "price", "type": "float64" },
+    { "name": "type", "type": "string" },
+    { "name": "address", "type": "string" },
+    { "name": "url", "type": "string" },
+    { "name": "agent_url", "type": "string" },
+    { "name": "number_bedrooms", "type": "float64" },
+    { "name": "full_description", "type": "string" },
+    { "name": "agent_name", "type": "string" },
+    { "name": "agent_address", "type": "string" },
+    { "name": "postcode", "type": "string" },
+    { "name": "longitude", "type": "float64" },
+    { "name": "latitude", "type": "float64" },
+    { "name": "viewType", "type": "string" },
+    { "name": "propertyType", "type": "string" },
+    { "name": "propertySubType", "type": "string" },
+    { "name": "added", "type": "string" },
+    { "name": "maxSizeFt", "type": "float64" },
+    { "name": "retirement", "type": "bool" },
+    { "name": "preOwned", "type": "string" }
+]
